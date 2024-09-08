@@ -5,7 +5,7 @@ import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDoj
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
 
-export default function Home() {
+export default function ForFirstTimers() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* KV */}
@@ -13,9 +13,8 @@ export default function Home() {
 
       {/* Contents */}
       <div className="mx-auto w-screen max-w-4xl p-8 py-20 sm:p-12 sm:py-20 md:p-24">
-        {/* マイクラ部お知らせ (First view news) */}
-        {/* @TODO: md から読み込みでも良いかも, もしくは API */}
-        <section className="mb-16 sm:mb-20">
+        {/* マイクラ部お知らせ */}
+        <section className="mb-12 sm:mb-20">
           <h2 className="mb-4 text-center text-2xl font-bold">
             CoderDojo八戸に「マイクラ部」ができました!!
           </h2>
@@ -37,10 +36,9 @@ export default function Home() {
         </section>
 
         {/* 次回開催 */}
-        {/* @TODO: API 連携 */}
         <NextEventDetails className="mb-12" />
 
-        {/* CoderDojo八戸はものづくりを楽しむ場所です！... */}
+        {/* CoderDojoは無料で学び合うプログラミング道場です。 */}
         <OurDojoOverview />
 
         {/* CoderDojoとは？ */}
@@ -50,7 +48,6 @@ export default function Home() {
         <Access className="mb-16" />
 
         {/* 開催報告 */}
-        {/* @TODO: API 連携 */}
         <EventReport />
       </div>
     </main>

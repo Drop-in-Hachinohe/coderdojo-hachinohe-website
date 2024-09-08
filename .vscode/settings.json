@@ -1,0 +1,41 @@
+{
+  "editor.fontFamily": "Cica",
+  "editor.fontSize": 14,
+  "editor.insertSpaces": true, // Tabキーで半角スペースを入力
+  "editor.matchBrackets": "always", // 対応する括弧の強調表示
+  "editor.renderWhitespace": "all", // 空白文字を可視化 "all" | "boundary"
+  "editor.tabSize": 2, // Tabキーで半角スペースn個分
+  "editor.wordWrap": "on", // 1行に収まらない場合は改行して表示する
+  "editor.formatOnSave": true, // ファイル保存時、prettier による自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "[graphql]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "stylelint.validate": ["css", "scss"],
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.run": "onType"
+}

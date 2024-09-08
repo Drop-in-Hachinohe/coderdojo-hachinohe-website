@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "VisualStudioExptTeam.vscodeintellicode", // IntelliCode
+    "ecmel.vscode-html-css", // HTML CSS Support
+    "xabikos.JavaScriptSnippets", // JavaScript(ES6) code snippets
+    "dsznajder.es7-react-js-snippets", // ES7+ React/Redux/React-Native snippets
+    "foxundermoon.next-js", // next.js
+    "PulkitGangwar.nextjs-snippets", // Next.js snippets
+    "bradlc.vscode-tailwindcss", // Tailwind CSS IntelliSense
+    "steoates.autoimport", // Auto Import
+    "formulahendry.auto-rename-tag", // Auto Rename Tag
+    "formulahendry.auto-close-tag", // Auto Close Tag
+    "christian-kohler.path-intellisense", // Path Intellisense
+    "esbenp.prettier-vscode", // Prettier - Code formatter
+    "dbaeumer.vscode-eslint" // ESLint
+  ]
+}
