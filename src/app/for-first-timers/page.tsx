@@ -9,7 +9,7 @@ export default function ForFirstTimers() {
       {/* Contents */}
       <div className="mx-auto w-screen max-w-4xl p-8 py-20 sm:p-12 sm:py-20 md:p-24">
         {/* 初めて参加される方へ */}
-        <div className="pb-5 sm:pb-5">
+        <div className="pb-5">
           <h2 className="text-center text-2xl font-bold">
             初めて参加される方へ
           </h2>
