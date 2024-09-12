@@ -4,8 +4,12 @@ export default function ForFirstTimers() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* Contents */}
       <div className="mx-auto w-screen max-w-4xl p-8 py-20 sm:p-12 sm:py-20 md:p-24">
+        {/* 初めて参加される方へ */}
+        <div className="pb-5 sm:pb-5">
+          <h2 className="text-center text-2xl font-bold">
+            初めて参加される方へ
           </h2>
-        </section>
+        </div>
 
 
 
