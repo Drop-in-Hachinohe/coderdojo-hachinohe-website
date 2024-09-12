@@ -1,4 +1,5 @@
 import NotAProgrammingSchool from '@/components/pages/for-first-timers/NotAProgrammingSchool/NotAProgrammingSchool';
+import MemberAtCoderDojo from '@/components/pages/for-first-timers/MemberAtCoderDojo/MemberAtCoderDojo';
 
 export default function ForFirstTimers() {
   return (
@@ -15,6 +16,8 @@ export default function ForFirstTimers() {
         {/* CoderDojoはプログラミング教室ではありません */}
         <NotAProgrammingSchool />
 
+        {/* CoderDojoにいるいろいろな人たち */}
+        <MemberAtCoderDojo />
 
 
       </div>
