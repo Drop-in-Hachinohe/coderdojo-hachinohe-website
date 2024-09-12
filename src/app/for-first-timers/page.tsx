@@ -1,3 +1,4 @@
+import NotAProgrammingSchool from '@/components/pages/for-first-timers/NotAProgrammingSchool/NotAProgrammingSchool';
 
 export default function ForFirstTimers() {
   return (
@@ -11,6 +12,8 @@ export default function ForFirstTimers() {
           </h2>
         </div>
 
+        {/* CoderDojoはプログラミング教室ではありません */}
+        <NotAProgrammingSchool />
 
 
 
