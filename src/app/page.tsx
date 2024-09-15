@@ -4,8 +4,12 @@ import OurDojoOverview from '@/components/pages/home/OurDojoOverview/OurDojoOver
 import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDojo';
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
+import getNextEvents from '@/features/nextEvent/api/getNextEvents';
 
-export default function Home() {
+export default async function Home() {
+  // 次回開催イベント一覧を取得
+  const nextEvents = await getNextEvents();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* KV */}
@@ -37,8 +41,7 @@ export default function Home() {
         </section>
 
         {/* 次回開催 */}
-        {/* @TODO: API 連携 */}
-        <NextEventDetails className="mb-12" />
+        <NextEventDetails className="mb-12" nextEvents={nextEvents.contents} />
 
         {/* CoderDojo八戸はものづくりを楽しむ場所です！... */}
         <OurDojoOverview />

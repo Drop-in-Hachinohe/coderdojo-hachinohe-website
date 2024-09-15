@@ -1,8 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const useFadeInOnScroll = () => {
+type ClassConfig = {
+  additionalClasses?: string;
+  classNameAttr?: string;
+};
+
+const useFadeInOnScroll = <T extends HTMLElement = HTMLElement>({
+  additionalClasses = '',
+  classNameAttr = '',
+}: ClassConfig = {}) => {
   const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<T>(null);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -33,9 +42,15 @@ const useFadeInOnScroll = () => {
   }, []);
 
   // Class を共通化
-  const fadeInClass = isVisible
+  const animationClass = isVisible
     ? 'transition-opacity duration-1000 translate-y-0 opacity-100'
     : 'transition-opacity duration-1000 translate-y-10 opacity-0';
+
+  const fadeInClass = `visible-on-noscript ${twMerge(
+    additionalClasses,
+    animationClass,
+    classNameAttr,
+  )}`;
 
   return { ref: elementRef, fadeInClass };
 };
