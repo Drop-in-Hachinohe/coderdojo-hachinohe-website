@@ -5,10 +5,17 @@ import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDoj
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
 import getNextEvents from '@/features/nextEvent/api/getNextEvents';
+import getReports from '@/features/reports/api/getReports';
 
 export default async function Home() {
   // 次回開催イベント一覧を取得
   const nextEvents = await getNextEvents();
+
+  // 開催報告一覧を取得
+  const reports = await getReports();
+
+  // @TODO: 一旦開催報告一覧をログに出力
+  console.log(reports);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
