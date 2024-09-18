@@ -14,9 +14,6 @@ export default async function Home() {
   // 開催報告一覧を取得
   const reports = await getReports();
 
-  // @TODO: 一旦開催報告一覧をログに出力
-  console.log(reports);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* KV */}
@@ -60,8 +57,7 @@ export default async function Home() {
         <Access className="mb-16" />
 
         {/* 開催報告 */}
-        {/* @TODO: API 連携 */}
-        <EventReport />
+        <EventReport reports={reports.contents} />
       </div>
     </main>
   );
