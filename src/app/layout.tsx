@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 
+import Noscript from '@/components/layouts/Noscript/Noscript';
 import TheHeader from '@/components/layouts/TheHeader/TheHeader';
 import TheFooter from '@/components/layouts/TheFooter/TheFooter';
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
+        <Noscript />
         <TheHeader />
         <div className="max-sm:pt-[54px]">{children}</div>
         <TheFooter />

@@ -4,8 +4,17 @@ import OurDojoOverview from '@/components/pages/home/OurDojoOverview/OurDojoOver
 import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDojo';
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
+import getNextEvents from '@/features/nextEvent/api/getNextEvents';
+import getReports from '@/features/reports/api/getReports';
+import PageHeading from '@/components/common/PageHeading/PageHeading';
 
-export default function Home() {
+export default async function Home() {
+  // 次回開催イベント一覧を取得
+  const nextEvents = await getNextEvents();
+
+  // 開催報告一覧を取得
+  const reports = await getReports();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* KV */}
@@ -16,9 +25,10 @@ export default function Home() {
         {/* マイクラ部お知らせ (First view news) */}
         {/* @TODO: md から読み込みでも良いかも, もしくは API */}
         <section className="mb-16 sm:mb-20">
-          <h2 className="mb-4 text-center text-2xl font-bold">
-            CoderDojo八戸に「マイクラ部」ができました!!
-          </h2>
+          <PageHeading
+            label="CoderDojo八戸に「マイクラ部」ができました!!"
+            className="mb-4"
+          />
           <p className="mb-2.5 text-left text-sm leading-6">
             マイクラ大好きなみんな!マイクラだけをやる「マイクラ部」に参加してみませんか!?
           </p>
@@ -37,8 +47,7 @@ export default function Home() {
         </section>
 
         {/* 次回開催 */}
-        {/* @TODO: API 連携 */}
-        <NextEventDetails className="mb-12" />
+        <NextEventDetails className="mb-12" nextEvents={nextEvents.contents} />
 
         {/* CoderDojo八戸はものづくりを楽しむ場所です！... */}
         <OurDojoOverview />
@@ -50,8 +59,7 @@ export default function Home() {
         <Access className="mb-16" />
 
         {/* 開催報告 */}
-        {/* @TODO: API 連携 */}
-        <EventReport />
+        <EventReport reports={reports.contents} />
       </div>
     </main>
   );
