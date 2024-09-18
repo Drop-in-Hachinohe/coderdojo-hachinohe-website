@@ -6,6 +6,7 @@ import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
 import getNextEvents from '@/features/nextEvent/api/getNextEvents';
 import getReports from '@/features/reports/api/getReports';
+import PageHeading from '@/components/common/PageHeading/PageHeading';
 
 export default async function Home() {
   // 次回開催イベント一覧を取得
@@ -24,9 +25,10 @@ export default async function Home() {
         {/* マイクラ部お知らせ (First view news) */}
         {/* @TODO: md から読み込みでも良いかも, もしくは API */}
         <section className="mb-16 sm:mb-20">
-          <h2 className="mb-4 text-center text-2xl font-bold">
-            CoderDojo八戸に「マイクラ部」ができました!!
-          </h2>
+          <PageHeading
+            label="CoderDojo八戸に「マイクラ部」ができました!!"
+            className="mb-4"
+          />
           <p className="mb-2.5 text-left text-sm leading-6">
             マイクラ大好きなみんな!マイクラだけをやる「マイクラ部」に参加してみませんか!?
           </p>
