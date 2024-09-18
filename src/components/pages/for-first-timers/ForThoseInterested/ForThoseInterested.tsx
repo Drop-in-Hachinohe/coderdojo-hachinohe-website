@@ -4,9 +4,12 @@ import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import useFadeInOnScroll from '@/hooks/useFadeInOnScroll';
+import useRuntimeConfig from '@/hooks/useRuntimeConfig';
 
 const ForThoseInterested = () => {
   const { ref: sectionRef, fadeInClass } = useFadeInOnScroll();
+
+  const runtimeConfig = useRuntimeConfig();
 
   const overviewTextClasses = 'mb-2.5 text-left text-sm leading-6';
   const studentCategoryTextClasses =
@@ -29,7 +32,7 @@ const ForThoseInterested = () => {
           貸し出しの用意もございます。事前にお問い合わせください。
         </p>
         <p className={overviewTextClasses}>
-          hachinohe_fukiage.jp@coderdojo.com
+          {runtimeConfig.public.contactEmail}
         </p>
       </div>
       <div className="py-4">
