@@ -1,11 +1,10 @@
+import FadeInOnScrollContainer from '@/components/common/FadeInOnScrollContainer/FadeInOnScrollContainer';
+import ReportList from '@/components/common/ReportList/ReportList';
 import getReports from '@/features/reports/api/getReports';
 
 export default async function ForFirstTimers() {
   // 開催報告一覧を取得
   const reports = await getReports();
-
-  // @TODO: 一旦開催報告一覧をログに出力
-  console.log(reports);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -16,7 +15,10 @@ export default async function ForFirstTimers() {
           <h2 className="text-center text-2xl font-bold">開催報告</h2>
         </div>
 
-        {/* @TODO: 開催報告一覧 */}
+        {/* 開催報告一覧 */}
+        <FadeInOnScrollContainer>
+          <ReportList reports={reports.contents} className="mt-5" />
+        </FadeInOnScrollContainer>
       </div>
     </main>
   );
