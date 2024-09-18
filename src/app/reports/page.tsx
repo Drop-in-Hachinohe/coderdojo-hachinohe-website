@@ -1,3 +1,4 @@
+import PageHeading from '@/components/common/PageHeading/PageHeading';
 import getReports from '@/features/reports/api/getReports';
 
 export default async function ForFirstTimers() {
@@ -13,7 +14,7 @@ export default async function ForFirstTimers() {
       <div className="mx-auto w-screen max-w-4xl px-8 py-20 max-sm:pt-14 sm:p-12 sm:py-20 md:p-24">
         {/* 初めて参加される方へ */}
         <div className="pb-5">
-          <h2 className="text-center text-2xl font-bold">開催報告</h2>
+          <PageHeading label="開催報告" />
         </div>
 
         {/* @TODO: 開催報告一覧 */}

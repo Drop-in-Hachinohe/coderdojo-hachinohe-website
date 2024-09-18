@@ -2,6 +2,7 @@ import NotAProgrammingSchool from '@/components/pages/for-first-timers/NotAProgr
 import MemberAtCoderDojo from '@/components/pages/for-first-timers/MemberAtCoderDojo/MemberAtCoderDojo';
 import ForUnsureFriends from '@/components/pages/for-first-timers/ForUnsureFriends/ForUnsureFriends';
 import ForThoseInterested from '@/components/pages/for-first-timers/ForThoseInterested/ForThoseInterested';
+import PageHeading from '@/components/common/PageHeading/PageHeading';
 
 export default function ForFirstTimers() {
   return (
@@ -10,9 +11,7 @@ export default function ForFirstTimers() {
       <div className="mx-auto w-screen max-w-4xl px-8 py-20 max-sm:pt-14 sm:p-12 sm:py-20 md:p-24">
         {/* 初めて参加される方へ */}
         <div className="pb-5">
-          <h2 className="text-center text-2xl font-bold">
-            初めて参加される方へ
-          </h2>
+          <PageHeading label="初めて参加される方へ" />
         </div>
 
         {/* CoderDojoはプログラミング教室ではありません */}
