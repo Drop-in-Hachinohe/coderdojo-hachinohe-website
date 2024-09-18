@@ -1,7 +1,4 @@
 import { microCMS } from '@/libs/microCMSClient';
-import excludeKeys from '@/utils/excludeKeys';
-
-import { reportKeys } from '../types/keys';
 
 import type { Report } from '../types';
 
@@ -12,7 +9,7 @@ export default async function getNextEvents() {
       next: { revalidate: 60 },
     },
     queries: {
-      fields: excludeKeys<Report>(reportKeys, 'content'),
+      // fields: excludeKeys<Report>(reportKeys, 'content'),
     },
   });
 }
