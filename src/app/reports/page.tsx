@@ -3,7 +3,7 @@ import FadeInOnScrollContainer from '@/components/common/FadeInOnScrollContainer
 import ReportList from '@/components/common/ReportList/ReportList';
 import getReports from '@/features/reports/api/getReports';
 
-export default async function ForFirstTimers() {
+export default async function Reports() {
   // 開催報告一覧を取得
   const reports = await getReports();
 
