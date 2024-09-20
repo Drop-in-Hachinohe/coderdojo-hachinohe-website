@@ -1,8 +1,13 @@
 import { type MicroCMSDate } from 'microcms-js-sdk';
 
-export type Mentors = {
+import { PositionDefinitions } from './keys';
+
+// PositionDefinitions 内 Object の key に依存する文字列が定義される
+export type Position = (typeof PositionDefinitions)[number]['key'];
+
+export type Mentor = {
   id: string;
-  position: ('champion' | 'mentor')[];
+  position: Position[];
   name: string;
   description: string;
   image: {
@@ -12,3 +17,8 @@ export type Mentors = {
   };
   order?: number;
 } & MicroCMSDate;
+
+export type MentorByPosition = {
+  position: Position;
+  mentors: Mentor[];
+};
