@@ -16,17 +16,19 @@ export default async function Mentors() {
         <div className="pb-5">
           <PageHeading label="サポートメンバー" className="mb-4" />
         </div>
+
+        {/* チャンピオン（主催者）一覧 */}
         <FadeInOnScrollContainer>
-          {/* チャンピオン（主催者）一覧 */}
           <SectionTitle title="チャンピオン（主催者）" className="mb-6" />
           <MentorList
             mentors={mentors.contents}
             position="champion"
-            className="mt-5 mb-12 sm:mt-10 sm:mb-20 "
+            className="mb-12 mt-5 sm:mb-20 sm:mt-10"
           />
         </FadeInOnScrollContainer>
+
+        {/* メンター一覧 */}
         <FadeInOnScrollContainer>
-          {/* メンター一覧 */}
           <SectionTitle title="メンター" className="mb-6" />
           <MentorList
             mentors={mentors.contents}
