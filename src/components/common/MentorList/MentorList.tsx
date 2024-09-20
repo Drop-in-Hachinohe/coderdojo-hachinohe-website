@@ -6,17 +6,12 @@ import type { Mentor } from '@/features/mentors/types';
 
 type MentorListProps = {
   mentors: Mentor[];
-  position: 'champion' | 'mentor';
 } & HTMLAttributes<HTMLUListElement>;
 
-const MentorList = ({ mentors, position, className }: MentorListProps) => {
-  const filteredMentors = mentors.filter((mentor) =>
-    mentor.position.includes(position),
-  );
-
+const MentorList = ({ mentors, className }: MentorListProps) => {
   return (
     <ul className={className}>
-      {filteredMentors.map((mentor) => (
+      {mentors.map((mentor) => (
         <li key={mentor.id}>
           <MentorMediaObject mentor={mentor} />
         </li>
