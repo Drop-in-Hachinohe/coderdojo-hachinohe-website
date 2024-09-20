@@ -5,6 +5,10 @@ export type Mentors = {
   position: ('champion' | 'mentor')[];
   name: string;
   description: string;
-  image: string;
+  image: {
+    url: string;
+    height: number;
+    width: number;
+  };
   order?: number;
 } & MicroCMSDate;
