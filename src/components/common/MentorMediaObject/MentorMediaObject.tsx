@@ -1,12 +1,11 @@
 import Image from 'next/image';
-
 import React, { HTMLAttributes } from 'react';
-
-import type { Mentors } from '@/features/mentors/types';
 import { twMerge } from 'tailwind-merge';
 
+import type { Mentor } from '@/features/mentors/types';
+
 type MentorMediaObjectProps = {
-  mentor: Mentors;
+  mentor: Mentor;
 } & HTMLAttributes<HTMLElement>;
 
 const MentorMediaObject = ({ mentor, className }: MentorMediaObjectProps) => {
@@ -32,7 +31,7 @@ const MentorMediaObject = ({ mentor, className }: MentorMediaObjectProps) => {
         </p>
         <div
           dangerouslySetInnerHTML={{
-            __html: mentor.description
+            __html: mentor.description,
           }}
           className={overviewTextClasses}
         />
