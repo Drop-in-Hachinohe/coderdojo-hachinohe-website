@@ -1,7 +1,8 @@
 import getReports from '@/features/report/api/getReports';
 import PaginatedReportList from '@/components/pages/reports/PaginatedReportList/PaginatedReportList';
+import constants from '@/utils/constants';
 
-const PER_PAGE = 12;
+const PER_PAGE = constants.report.PER_PAGE;
 
 export default async function Reports() {
   // 開催報告一覧を取得
