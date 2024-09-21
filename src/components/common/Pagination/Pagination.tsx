@@ -18,7 +18,7 @@ const Pagination = ({
   className,
 }: PaginationProps) => {
   const { page } = useParams();
-  const currentPage = Number(page);
+  const currentPage = Number(page) || 1;
 
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === totalPageCount;
