@@ -13,7 +13,10 @@ export default async function Home() {
   const nextEvents = await getNextEvents();
 
   // 開催報告一覧を取得
-  const reports = await getReports();
+  const reports = await getReports({
+    limit: 3,
+    orders: '-publishedAt,-originalCreatedAt',
+  });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
