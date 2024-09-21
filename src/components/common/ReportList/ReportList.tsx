@@ -13,7 +13,7 @@ const ReportList = ({ reports, className }: ReportListProps) => {
   return (
     <ul
       className={twMerge(
-        'grid grid-cols-1 gap-5 max-sm:gap-10 sm:grid-cols-2 md:grid-cols-3',
+        'grid grid-cols-1 gap-8 max-sm:gap-10 sm:grid-cols-2 md:grid-cols-3',
         className,
       )}
     >
