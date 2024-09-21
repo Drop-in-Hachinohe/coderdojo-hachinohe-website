@@ -5,7 +5,7 @@ import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDoj
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
 import getNextEvents from '@/features/nextEvent/api/getNextEvents';
-import getReports from '@/features/reports/api/getReports';
+import getReports from '@/features/report/api/getReports';
 import PageHeading from '@/components/common/PageHeading/PageHeading';
 
 export default async function Home() {

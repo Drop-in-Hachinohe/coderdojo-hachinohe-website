@@ -2,7 +2,7 @@ import FadeInOnScrollContainer from '@/components/common/FadeInOnScrollContainer
 import ReportList from '@/components/common/ReportList/ReportList';
 import Pagination from '@/components/common/Pagination/Pagination';
 
-import type { Report } from '@/features/reports/types';
+import type { Report } from '@/features/report/types';
 
 type PaginatedReportListProps = {
   reports: Report[];

@@ -1,4 +1,4 @@
-import getReports from '@/features/reports/api/getReports';
+import getReports from '@/features/report/api/getReports';
 import PaginatedReportList from '@/components/pages/reports/PaginatedReportList/PaginatedReportList';
 
 const PER_PAGE = 12;

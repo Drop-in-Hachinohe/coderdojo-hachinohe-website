@@ -1,4 +1,4 @@
-import type { Report } from '../';
+import type { Report } from '..';
 
 export const reportKeys: Array<keyof Report> = [
   'id',

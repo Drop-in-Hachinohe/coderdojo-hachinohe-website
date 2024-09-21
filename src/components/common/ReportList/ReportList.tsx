@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 
 import ReportCard from '../ReportCard/ReportCard';
 
-import type { Report } from '@/features/reports/types';
+import type { Report } from '@/features/report/types';
 
 type ReportListProps = {
   reports: Report[];
