@@ -1,6 +1,6 @@
 import { type MicroCMSDate } from 'microcms-js-sdk';
 
-export type Mentors = {
+export type Mentor = {
   id: string;
   position: ('champion' | 'mentor')[];
   name: string;

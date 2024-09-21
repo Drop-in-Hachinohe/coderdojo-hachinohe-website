@@ -2,11 +2,11 @@ import Image from 'next/image';
 
 import React, { HTMLAttributes } from 'react';
 
-import type { Mentors } from '@/features/mentors/types';
+import type { Mentor } from '@/features/mentors/types';
 import { twMerge } from 'tailwind-merge';
 
 type MentorMediaObjectProps = {
-  mentor: Mentors;
+  mentor: Mentor;
 } & HTMLAttributes<HTMLElement>;
 
 const MentorMediaObject = ({ mentor, className }: MentorMediaObjectProps) => {
