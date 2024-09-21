@@ -1,14 +1,14 @@
-import Image from 'next/image';
 import React, { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
-import type { Mentor } from '@/features/mentors/types';
+import { Mentor } from '@/features/mentors/types';
 
 type MentorMediaObjectProps = {
   mentor: Mentor;
 } & HTMLAttributes<HTMLElement>;
 
-const MentorMediaObject = ({ mentor, className }: MentorMediaObjectProps) => {
+const MentorMediaObject = ({ mentor }: MentorMediaObjectProps) => {
   const overviewTextClasses = 'text-sm leading-6 text-left mb-2.5 last:mb-0';
 
   return (
