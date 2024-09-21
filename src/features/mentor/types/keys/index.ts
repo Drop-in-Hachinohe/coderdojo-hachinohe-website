@@ -1,4 +1,4 @@
-import { Position } from '../';
+import { Position } from '..';
 
 // 順番込みでポジションキーの定義を一か所に集約 (API 側で追加編集があれば, 以下を修正)
 export const PositionDefinitions = [

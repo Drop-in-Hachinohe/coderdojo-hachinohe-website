@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from 'react';
 
 import MentorMediaObject from '../MentorMediaObject/MentorMediaObject';
 
-import type { Mentor } from '@/features/mentors/types';
+import type { Mentor } from '@/features/mentor/types';
 
 type MentorListProps = {
   mentors: Mentor[];

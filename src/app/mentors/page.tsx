@@ -1,18 +1,18 @@
 import PageHeading from '@/components/common/PageHeading/PageHeading';
 import SectionTitle from '@/components/common/SectionTitle/SectionTitle';
-import getMentors from '@/features/mentors/api/getMentors';
+import getMentors from '@/features/mentor/api/getMentors';
 import MentorList from '@/components/common/MentorList/MentorList';
 import FadeInOnScrollContainer from '@/components/common/FadeInOnScrollContainer/FadeInOnScrollContainer';
 import {
   PositionDefinitions,
   sortingPositionsKeys,
-} from '@/features/mentors/types/keys';
+} from '@/features/mentor/types/keys';
 
 import type {
   Position,
   MentorByPosition,
   Mentor,
-} from '@/features/mentors/types';
+} from '@/features/mentor/types';
 
 export default async function Mentors() {
   // サポートメンバー一覧を取得
