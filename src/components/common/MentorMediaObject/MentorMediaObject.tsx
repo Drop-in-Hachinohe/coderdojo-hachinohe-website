@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
 
-import { Mentor } from '@/features/mentors/types';
+import { Mentor } from '@/features/mentor/types';
 
 type MentorMediaObjectProps = {
   mentor: Mentor;
