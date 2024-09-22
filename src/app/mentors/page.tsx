@@ -33,21 +33,21 @@ export default async function Mentors() {
       {} as Record<Position, Mentor[]>,
     );
 
-    // 更に sortingPositionsKeys の順序でソート mentors 配列を生成
-    const result = Object.entries(groupedByPosition)
-      // sortingPositionsKeys の順序で配列をソートする
-      .sort(
-        ([a], [b]) =>
-          sortingPositionsKeys.indexOf(a as Position) -
-          sortingPositionsKeys.indexOf(b as Position),
-      )
-      // MentorByPosition に変換
-      .map(([position, mentors]) => ({
-        position: position as Position,
-        mentors,
-      }));
-
-    return result;
+    // sortingPositionsKeys の順序でソート mentors 配列 (MentorByPosition[]) を返却
+    return (
+      Object.entries(groupedByPosition)
+        // sortingPositionsKeys の順序で配列をソートする
+        .sort(
+          ([a], [b]) =>
+            sortingPositionsKeys.indexOf(a as Position) -
+            sortingPositionsKeys.indexOf(b as Position),
+        )
+        // MentorByPosition に変換
+        .map(([position, mentors]) => ({
+          position: position as Position,
+          mentors,
+        }))
+    );
   })();
 
   // MentorListSections JSX の定義
