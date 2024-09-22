@@ -23,11 +23,11 @@ export default async function Mentors() {
     // position を key とした (グルーピング) Object 配列を生成
     const groupedByPosition = mentors.contents.reduce(
       (acc, mentor) => {
-        if (!acc[mentor.position[0]]) {
-          acc[mentor.position[0]] = [];
+        const mentorPosition = mentor.position[0];
+        if (!acc[mentorPosition]) {
+          acc[mentorPosition] = [];
         }
-
-        acc[mentor.position[0]].push(mentor);
+        acc[mentorPosition].push(mentor);
         return acc;
       },
       {} as Record<Position, Mentor[]>,
