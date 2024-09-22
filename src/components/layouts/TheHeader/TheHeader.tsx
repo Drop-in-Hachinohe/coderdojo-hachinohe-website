@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const TheHeader = () => {
@@ -27,6 +27,20 @@ const TheHeader = () => {
       href: '/mentors',
     },
   ];
+
+  // navMenu 内 Link の TW Class 群
+  const navMenuLinkTwClasses = useMemo(() => {
+    return (navMenuItemHref: string): string => {
+      return twMerge(
+        'relative inline-block',
+        navigationPath === navMenuItemHref ||
+          (navMenuItemHref === '/reports' &&
+            /^\/reports\/page\/\d+$/.test(navigationPath))
+          ? 'text-gray-400 after:absolute after:bottom-[-8px] after:left-0 after:h-[1px] after:w-full after:bg-gray-400'
+          : undefined,
+      );
+    };
+  }, [navigationPath]);
 
   const handleOnTapToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -118,12 +132,7 @@ const TheHeader = () => {
             <li key={`nav-menu-${index}`} className="mx-4 py-2">
               <Link
                 href={item.href}
-                className={twMerge(
-                  'relative inline-block',
-                  navigationPath === item.href
-                    ? `text-gray-400 after:absolute after:bottom-[-8px] after:left-0 after:h-[1px] after:w-full after:bg-gray-400`
-                    : undefined,
-                )}
+                className={navMenuLinkTwClasses(item.href)}
                 onClick={handleOnTapLink}
               >
                 {item.text}

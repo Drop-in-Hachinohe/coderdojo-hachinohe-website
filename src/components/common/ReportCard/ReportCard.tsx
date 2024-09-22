@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { formatDate } from '@/utils/formatDate';
 import { extractFirstImageUrl } from '@/utils/extractFirstImageUrl';
 
-import type { Report } from '@/features/reports/types';
+import type { Report } from '@/features/report/types';
 
 const DEFAULT_LOGO_IMAGE = '/images/logo.jpg';
 

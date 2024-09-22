@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 
 import ReportCard from '../ReportCard/ReportCard';
 
-import type { Report } from '@/features/reports/types';
+import type { Report } from '@/features/report/types';
 
 type ReportListProps = {
   reports: Report[];
@@ -13,7 +13,7 @@ const ReportList = ({ reports, className }: ReportListProps) => {
   return (
     <ul
       className={twMerge(
-        'grid grid-cols-1 gap-5 max-sm:gap-10 sm:grid-cols-2 md:grid-cols-3',
+        'grid grid-cols-1 gap-8 max-sm:gap-10 sm:grid-cols-2 md:grid-cols-3',
         className,
       )}
     >

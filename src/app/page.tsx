@@ -5,7 +5,7 @@ import AboutCoderDojo from '@/components/pages/home/AboutCoderDojo/AboutCoderDoj
 import Access from '@/components/pages/home/Access/Access';
 import EventReport from '@/components/pages/home/EventReport/EventReport';
 import getNextEvents from '@/features/nextEvent/api/getNextEvents';
-import getReports from '@/features/reports/api/getReports';
+import getReports from '@/features/report/api/getReports';
 import PageHeading from '@/components/common/PageHeading/PageHeading';
 
 export default async function Home() {
@@ -13,7 +13,10 @@ export default async function Home() {
   const nextEvents = await getNextEvents();
 
   // 開催報告一覧を取得
-  const reports = await getReports();
+  const reports = await getReports({
+    limit: 3,
+    orders: '-publishedAt,-originalCreatedAt',
+  });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
