@@ -23,8 +23,11 @@ export function parseToNextJSX(rawHtml: string) {
             );
           // <p>...</p>
           case 'p':
+            // 空の場合は <br /> で改行, それ以外は domToReact(children)
             return (
-              <p className={twMerge('mc-content-p')}>{domToReact(children)}</p>
+              <p className={twMerge('mc-content-p')}>
+                {domNode.children.length === 0 ? <br /> : domToReact(children)}
+              </p>
             );
           // <figure>...</figure>
           case 'figure':
