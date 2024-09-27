@@ -17,7 +17,7 @@ const ReportContent = ({ report, className }: ReportContentProps) => {
     {
       additionalClasses: 'py-4',
     },
-    undefined,
+    0,
   );
 
   return (
