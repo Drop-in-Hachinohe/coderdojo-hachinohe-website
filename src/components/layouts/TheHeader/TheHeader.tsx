@@ -35,7 +35,8 @@ const TheHeader = () => {
         'relative inline-block',
         navigationPath === navMenuItemHref ||
           (navMenuItemHref === '/reports' &&
-            /^\/reports\/page\/\d+$/.test(navigationPath))
+            (/^\/reports\/page\/\d+$/.test(navigationPath) ||
+              /^\/reports\/[a-zA-Z0-9._-]+$/.test(navigationPath)))
           ? 'text-gray-400 after:absolute after:bottom-[-8px] after:left-0 after:h-[1px] after:w-full after:bg-gray-400'
           : undefined,
       );
