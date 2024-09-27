@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" prefix="og: http://ogp.me/ns#">
       <body className={inter.className}>
         <Noscript />
         <TheHeader />
