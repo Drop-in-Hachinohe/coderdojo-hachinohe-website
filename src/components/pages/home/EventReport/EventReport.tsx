@@ -8,7 +8,7 @@ import ButtonLink from '@/components/common/ButtonLink/ButtonLink';
 import useFadeInOnScroll from '@/hooks/useFadeInOnScroll';
 import ReportList from '@/components/common/ReportList/ReportList';
 
-import type { Report } from '@/features/reports/types';
+import type { Report } from '@/features/report/types';
 
 type EventReportProps = {
   reports: Report[];
