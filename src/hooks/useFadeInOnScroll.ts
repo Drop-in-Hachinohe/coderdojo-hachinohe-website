@@ -6,10 +6,10 @@ type ClassConfig = {
   classNameAttr?: string;
 };
 
-const useFadeInOnScroll = <T extends HTMLElement = HTMLElement>({
-  additionalClasses = '',
-  classNameAttr = '',
-}: ClassConfig = {}) => {
+const useFadeInOnScroll = <T extends HTMLElement = HTMLElement>(
+  { additionalClasses = '', classNameAttr = '' }: ClassConfig = {},
+  threshold: number = 0.1,
+) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<T>(null);
 
@@ -26,7 +26,7 @@ const useFadeInOnScroll = <T extends HTMLElement = HTMLElement>({
       },
       {
         root: null, // ビューポートを監視
-        threshold: 0.1, // 要素の 10% が表示されたら発火
+        threshold, // 要素の 10% が表示されたら発火
       },
     );
 
@@ -39,6 +39,7 @@ const useFadeInOnScroll = <T extends HTMLElement = HTMLElement>({
         observer.unobserve(element);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Class を共通化
