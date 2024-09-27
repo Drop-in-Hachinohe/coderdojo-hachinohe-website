@@ -23,3 +23,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.mc-content-p {
+  @apply text-sm leading-7 max-sm:leading-6;
+
+  a {
+    @apply text-blue-400 hover:opacity-70;
+  }
+}
+
+.mc-content-h2 {
+  @apply my-8 text-2xl max-sm:my-4 max-sm:text-xl;
+}
+
+.mc-content-figure {
+  @apply my-10;
+}
