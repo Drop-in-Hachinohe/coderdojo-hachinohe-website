@@ -3,11 +3,11 @@ import { Inter } from 'next/font/google';
 import Noscript from '@/components/layouts/Noscript/Noscript';
 import TheHeader from '@/components/layouts/TheHeader/TheHeader';
 import TheFooter from '@/components/layouts/TheFooter/TheFooter';
+import { createMeta } from '@/helpers/meta';
 
 import type { Metadata } from 'next';
 
 import './globals.scss';
-import { createMeta } from '@/helpers/meta';
 
 const inter = Inter({ subsets: ['latin'] });
 

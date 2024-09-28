@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import PageHeading from '@/components/common/PageHeading/PageHeading';
 import SectionTitle from '@/components/common/SectionTitle/SectionTitle';
 import getMentors from '@/features/mentor/api/getMentors';
@@ -7,14 +9,13 @@ import {
   PositionDefinitions,
   sortingPositionsKeys,
 } from '@/features/mentor/types/keys';
+import { createMeta } from '@/helpers/meta';
 
 import type {
   Position,
   MentorByPosition,
   Mentor,
 } from '@/features/mentor/types';
-import { Metadata } from 'next';
-import { createMeta } from '@/helpers/meta';
 
 export const metadata: Metadata = {
   ...createMeta(
