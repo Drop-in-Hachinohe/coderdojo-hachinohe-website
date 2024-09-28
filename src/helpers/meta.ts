@@ -6,9 +6,7 @@ export function createMeta(
   path: string = '',
   imageUrl?: string,
 ): Metadata {
-  console.log(imageUrl);
   return {
-    viewport: 'width=device-width, initial-scale=1.0',
     title:
       title === ''
         ? process.env.NEXT_PUBLIC_SITE_TITLE
