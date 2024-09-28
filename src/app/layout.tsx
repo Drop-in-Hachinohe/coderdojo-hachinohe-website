@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google';
 
 import Noscript from '@/components/layouts/Noscript/Noscript';
-import TheHeader from '@/components/layouts/TheHeader/TheHeader';
-import TheFooter from '@/components/layouts/TheFooter/TheFooter';
 import { createMeta } from '@/helpers/meta';
 
 import type { Metadata } from 'next';
@@ -22,9 +20,7 @@ export default function RootLayout({
     <html lang="ja" prefix="og: http://ogp.me/ns#">
       <body className={inter.className}>
         <Noscript />
-        <TheHeader />
-        <div className="max-sm:pt-[54px]">{children}</div>
-        <TheFooter />
+        {children}
       </body>
     </html>
   );
