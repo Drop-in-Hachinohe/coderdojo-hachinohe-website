@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import PageHeading from '@/components/common/PageHeading/PageHeading';
 import ReportContent from '@/components/pages/reports/ReportContent/ReportContent';
 import getReport from '@/features/report/api/getReport';
@@ -11,10 +13,10 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   // 開催報告の詳細を取得
   const report = await getReport(params.id);
   // OG Image
-  const ogImageUrl = extractFirstImageUrl(report.content);
+  const ogImageUrl = extractFirstImageUrl(report?.content || '');
   return createMeta(
-    report.title || '',
-    report.summary || '',
+    report?.title || '',
+    report?.summary || '',
     `/reports/${params.id}`,
     ogImageUrl,
   );
@@ -36,8 +38,13 @@ export default async function ReportDetailIndex({
 }: {
   params: { id: string };
 }) {
-  // 開催報告の詳細を取得
   const report = await getReport(params.id);
+
+  // report が null の場合
+  if (!report) {
+    notFound(); // 404 ページにリダイレクト
+  }
+
   // 投稿日時
   const publishedAt = report.originalCreatedAt || report.publishedAt;
 
