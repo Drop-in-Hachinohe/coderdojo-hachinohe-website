@@ -7,10 +7,13 @@ export default function NotFound() {
   return (
     <main className={mainTwClasses}>
       <div className="relative z-20 flex h-screen flex-col items-center justify-center">
-        <p className="mb-8 text-xl text-white">
+        <p className="mb-8 text-xl text-white max-sm:text-base">
           お探しのページは見つかりませんでした。
         </p>
-        <ButtonLink href="/" className="!w-64 bg-[#4D6B6B]/15 text-white">
+        <ButtonLink
+          href="/"
+          className="!w-64 bg-[#4D6B6B]/15 text-white max-sm:!w-56 max-sm:text-sm"
+        >
           ホームへ戻る
         </ButtonLink>
       </div>
