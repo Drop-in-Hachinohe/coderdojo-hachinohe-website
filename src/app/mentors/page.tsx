@@ -13,6 +13,16 @@ import type {
   MentorByPosition,
   Mentor,
 } from '@/features/mentor/types';
+import { Metadata } from 'next';
+import { createMeta } from '@/helpers/meta';
+
+export const metadata: Metadata = {
+  ...createMeta(
+    'サポートメンバー',
+    'サポートメンバー - CoderDojo八戸で一緒にプログラミングをしてくれるメンバーを紹介します！',
+    '/mentors',
+  ),
+};
 
 export default async function Mentors() {
   // サポートメンバー一覧を取得
