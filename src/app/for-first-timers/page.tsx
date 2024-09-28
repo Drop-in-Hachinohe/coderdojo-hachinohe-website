@@ -1,9 +1,10 @@
+import { Metadata } from 'next';
+
 import NotAProgrammingSchool from '@/components/pages/for-first-timers/NotAProgrammingSchool/NotAProgrammingSchool';
 import MemberAtCoderDojo from '@/components/pages/for-first-timers/MemberAtCoderDojo/MemberAtCoderDojo';
 import ForUnsureFriends from '@/components/pages/for-first-timers/ForUnsureFriends/ForUnsureFriends';
 import ForThoseInterested from '@/components/pages/for-first-timers/ForThoseInterested/ForThoseInterested';
 import PageHeading from '@/components/common/PageHeading/PageHeading';
-import { Metadata } from 'next';
 import { createMeta } from '@/helpers/meta';
 
 export const metadata: Metadata = {
