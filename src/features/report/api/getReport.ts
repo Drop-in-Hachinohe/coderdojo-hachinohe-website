@@ -7,12 +7,18 @@ export default async function getReport(
   contentId: string,
   queries?: MicroCMSQueries,
 ) {
-  return await microCMS.get<Report>({
-    endpoint: 'reports',
-    contentId,
-    customRequestInit: {
-      next: { revalidate: 60 },
-    },
-    queries,
-  });
+  return (
+    (await microCMS
+      .get<Report>({
+        endpoint: 'reports',
+        contentId,
+        customRequestInit: {
+          next: { revalidate: 60 },
+        },
+        queries,
+      })
+      .catch((error) => {
+        console.error(error);
+      })) || null
+  );
 }

@@ -3,8 +3,13 @@ import { notFound } from 'next/navigation';
 import getReports from '@/features/report/api/getReports';
 import PaginatedReportList from '@/components/pages/reports/PaginatedReportList/PaginatedReportList';
 import constants from '@/utils/constants';
+import { createMeta } from '@/helpers/meta';
 
 const PER_PAGE = constants.report.PER_PAGE;
+
+export function generateMetadata({ params }: { params: { page: number } }) {
+  return createMeta('開催報告', '', `/reports/page/${params.page}`);
+}
 
 export async function generateStaticParams() {
   // コンテンツのトータル件数を取得
