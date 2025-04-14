@@ -28,7 +28,18 @@ Add the development environment variables to the .env file.
 NEXT_PUBLIC_CONTACT_ADDRESS=青森県八戸市X町XXX1-234
 NEXT_PUBLIC_CONTACT_PERSON=山田
 NEXT_PUBLIC_CONTACT_PHONE_NUMBER=0X0-1234-5678
+NEXT_PUBLIC_CONTACT_EMAIL=email@exsample.com
 NEXT_PUBLIC_GOOGLE_MAP_EMBED_URL=`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194238.33585874768!2d141.3356902226572!3d40.47584025803483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b4d6d1a08926b%3A0x5de124698da3784!2z6Z2S5qOu55yM5YWr5oi45biC!5e0!3m2!1sja!2sjp!4v1725814336428!5m2!1sja!2sjp`
+
+MICROCMS_DOMAIN=xxxxxxx (共有いたしますので、Contributor 宛にご連絡ださい)
+MICROCMS_API_KEY=xxxxxxx (共有いたしますので、Contributor 宛にご連絡ださい)
+
+# metadata
+NEXT_PUBLIC_SITE_TITLE="CoderDojo〇〇"
+NEXT_PUBLIC_SITE_DESCRIPTION="たくさん考えよう。たくさん話そう。みんなのプログラミング道場「CoderDojo〇〇」"
+NEXT_PUBLIC_SITE_KEYWORDS="CoderDojo,CoderDojo〇〇,青森県八戸市"
+NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+NEXT_PUBLIC_TWITTER_SITE_URL="@foobar"
 ```
 
 ### 開発サーバーの起動 / Starting Dev Server

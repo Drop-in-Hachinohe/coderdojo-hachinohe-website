@@ -32,6 +32,7 @@ const AboutCoderDojo = ({ className }: AboutCoderDojoProps) => {
           <p className={overviewTextClasses}>
             CoderDojoについてのより詳しい情報は、
             <a
+              className="text-blue-400 hover:opacity-70"
               href="https://coderdojo.jp/"
               target="_blank"
               rel="noopener noreferrer"
@@ -43,14 +44,20 @@ const AboutCoderDojo = ({ className }: AboutCoderDojoProps) => {
         </div>
         {/* バナー */}
         <div className="flex-1">
-          <Image
-            src="/images/coderdojo-japan.jpg"
-            alt="CoderDojo Japan"
-            width="340"
-            height="260"
-            className="!w-full md:w-[340px]"
-            loading="lazy"
-          />
+          <a
+            href="https://coderdojo.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/images/coderdojo-japan.jpg"
+              alt="CoderDojo Japan"
+              width="340"
+              height="260"
+              className="!w-full md:w-[340px]"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
       <div className="flex justify-center">
