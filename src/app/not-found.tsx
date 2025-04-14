@@ -2,7 +2,7 @@
 import ButtonLink from '@/components/common/ButtonLink/ButtonLink';
 
 export default function NotFound() {
-  const mainTwClasses = `relative z-10 flex h-screen items-center justify-center bg-404-image bg-cover bg-center bg-no-repeat before:absolute before:left-0 before:top-0 before:z-[11] before:h-screen before:w-screen before:bg-404-gradient after:absolute after:left-0 after:top-0 after:z-[12] after:h-screen after:w-screen after:bg-[#4D6B6B]/15`;
+  const mainTwClasses = `relative z-10 flex h-screen items-center justify-center bg-404-image bg-cover bg-center bg-no-repeat before:absolute before:left-0 before:top-0 before:z-[11] before:h-screen before:w-full before:bg-404-gradient after:absolute after:left-0 after:top-0 after:z-[12] after:h-screen after:w-full after:bg-[#4D6B6B]/15`;
 
   return (
     <main className={mainTwClasses}>
