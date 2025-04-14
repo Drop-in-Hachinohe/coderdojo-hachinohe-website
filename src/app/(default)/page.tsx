@@ -24,7 +24,7 @@ export default async function Home() {
       <KeyVisual />
 
       {/* Contents */}
-      <div className="mx-auto w-screen max-w-4xl p-8 py-20 sm:p-12 sm:py-20 md:p-24">
+      <div className="mx-auto w-full max-w-4xl p-8 py-20 sm:p-12 sm:py-20 md:p-24">
         {/* マイクラ部お知らせ (First view news) */}
         {/* @TODO: md から読み込みでも良いかも, もしくは API */}
         <section className="mb-16 sm:mb-20">

@@ -89,7 +89,7 @@ export default async function Mentors() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* Contents */}
-      <div className="mx-auto w-screen max-w-4xl px-8 py-20 max-sm:pt-14 sm:p-12 sm:py-20 md:p-24">
+      <div className="mx-auto w-full max-w-4xl px-8 py-20 max-sm:pt-14 sm:p-12 sm:py-20 md:p-24">
         {/* サポートメンバー */}
         <div className="pb-5">
           <PageHeading label="サポートメンバー" className="mb-4" />
