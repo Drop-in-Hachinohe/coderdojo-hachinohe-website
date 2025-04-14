@@ -54,7 +54,7 @@ const TheHeader = () => {
   return (
     <>
       {/* ヘッダー */}
-      <header className="fixed top-0 z-[51] w-screen bg-white px-6 pt-2 max-sm:pb-2 sm:relative">
+      <header className="fixed top-0 z-[51] w-full bg-white px-6 pt-2 max-sm:pb-2 sm:relative">
         <div className="relative flex items-center justify-center py-0 sm:py-12">
           {/* ハンバーガーメニューアイコン */}
           <button
@@ -146,7 +146,7 @@ const TheHeader = () => {
       {/* オーバーレイ */}
       <div
         className={twMerge(
-          'fixed left-0 top-0 h-screen w-screen bg-gray-800 transition-all duration-700 ease-in-out sm:hidden',
+          'fixed left-0 top-0 h-screen w-full bg-gray-800 transition-all duration-700 ease-in-out sm:hidden',
           isMenuOpen ? 'z-[49] opacity-50' : 'z-[-1] opacity-0',
         )}
         onClick={() => {
